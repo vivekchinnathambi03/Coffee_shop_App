@@ -1,0 +1,54 @@
+.nav-tabs {
+    display: flex;
+    border: 0;
+    align-items: center;
+    .nav-item {
+        a {
+            color: #ffffff;
+            padding: 10px;
+            text-decoration: none;
+            &:hover,&:focus {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.navigation-cotainer {
+    width: 100%;
+    background-color: #795548 !important;
+    padding: 1% 6%;
+    display: flex;
+    position: fixed;
+    color: #ffffff;
+    justify-content: space-between
+}
+
+
+.nav-link {
+    color: #ffffff;
+}
+
+main {
+    padding: 8% 6%;
+}
+
+.logo {
+    height: 46px;
+    width: 62px;
+}
+
+.footer {
+    height: 50%;
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-image: url(https://www.baristacafe.nl/wp-content/uploads/2019/01/Footer-Cappuccino3_V2.jpg);
+    font-family: Montserrat;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 14px;
+    line-height: 26px;
+    color: #ffffff;
+}

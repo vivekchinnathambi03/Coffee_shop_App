@@ -1,0 +1,20 @@
+<div class="navigation-cotainer">
+    <a routerLink="/">
+        <img class="logo" src="https://www.baristacafe.nl/wp-content/uploads/2019/01/BC_Logo_wit_retina.png" />
+    </a>
+    <ul ngbNav [activeId]="route.fragment | async" class="nav-tabs">
+        <li [ngbNavItem]="link.fragment" *ngFor="let link of links">
+            <a [routerLink]="link.fragment">
+                {{link.title}}
+            </a>
+        </li>
+    </ul>
+</div>
+
+<main>
+    <router-outlet></router-outlet>
+</main>
+
+<div class="footer">
+
+</div>

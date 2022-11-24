@@ -1,0 +1,24 @@
+<div>
+    <h1 class="header-font">Dashboard</h1>
+    <div class="line-decorator"></div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">User</th>
+                <th scope="col">Total orders</th>
+                <th scope="col">AmountPaid</th>
+                <th scope="col">Owes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let payment of payments; index as i">
+                <td class="text-capitalize">
+                    {{ payment.user }}
+                </td>
+                <td>{{ payment.price }}</td>
+                <td>{{ payment.amountPaid }}</td>
+                <td>{{ payment.owes }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

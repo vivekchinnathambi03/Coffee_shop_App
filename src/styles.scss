@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+.table>thead {
+    background-color: #795548;
+    color: #ffffff;
+}
+
+.page-link.active, .active > .page-link {
+    color: #ffffff !important;
+    background-color: #795548 !important;
+}
+.page-link {
+    color: #795548 !important;
+    border-color: #795548 !important;;
+}
+
+.header-font {
+    font-size: 22px;
+}
+
+.line-decorator {
+    border-bottom: 4px solid #795548;
+    width: 8%;
+    margin-bottom: 40px;
+}

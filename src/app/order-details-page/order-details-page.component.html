@@ -1,0 +1,37 @@
+<div class="order-details-container">
+    <h1 class="header-font">Orders Details</h1>
+    <div class="line-decorator"></div>
+    <input [(ngModel)]="searchText" type="text" id="searchBox" class="col-lg-9 col-md-9 col-sm-7 col-7 search-input"
+        (keyup)="filterBrands()" placeholder="Search" type="text" />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">User</th>
+                <th scope="col">Drink</th>
+                <th scope="col">Size</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orderDetails; index as i">
+                <td class="text-capitalize">
+                    {{ order.user }}
+                </td>
+                <td>{{ order.drink }}</td>
+                <td>{{ order.size }}</td>
+                <td>{{ priceDetails[order.drink][order.size] }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-between p-2">
+        <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
+            (pageChange)="paginationData()">
+        </ngb-pagination>
+
+        <select class="form-select" style="width: auto;" [(ngModel)]="pageSize" (ngModelChange)="paginationData()">
+            <option [ngValue]="10">10 items per page</option>
+            <option [ngValue]="20">20 items per page</option>
+            <option [ngValue]="30">30 items per page</option>
+        </select>
+    </div>
+</div>

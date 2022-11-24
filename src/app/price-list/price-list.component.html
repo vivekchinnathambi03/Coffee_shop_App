@@ -1,0 +1,24 @@
+<div>
+    <h1 class="header-font">Price List</h1>
+    <div class="line-decorator"></div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Drink Name</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let detail of priceDetailsList; index as i">
+                <td class="text-capitalize">
+                    {{ detail.drink_name }}
+                </td>
+                <td>
+                    <ng-container *ngFor="let item of detail.prices | keyvalue">
+                       <ul> <li>{{ item.key }} :  {{ item.value }} </li> </ul>
+                    </ng-container>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
