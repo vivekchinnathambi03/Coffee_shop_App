@@ -68,7 +68,7 @@ export class OrderDetailsPageComponent implements OnInit {
 		);
     }
 
-    filterBrands (){
+    filterOrders (){
         this.orderDetails = this.ordersPermanentData.filter((order:any)=>{
             return order.user.toLowerCase().indexOf(this.searchText.toLowerCase())>=0  ||
                     order.drink.toString().toLowerCase().indexOf(this.searchText.toLowerCase())>=0 ||
